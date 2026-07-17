@@ -17,10 +17,7 @@ Derived from [nx-hbloader](https://github.com/switchbrew/nx-hbloader), it extend
 ## Features
 
 - **Overlay chainloading** — automatically loads `/switch/.overlays/ovlmenu.ovl` (Ultrahand Overlay or Tesla Menu) at boot and after each overlay exits
-- **Dynamic heap sizing** — reads a persistent config at `/config/nx-ovlloader/heap_size.bin`; if none is set, selects the optimal default based on HOS version:
-  - HOS 21.0.0+ → **4 MB**
-  - HOS 20.0.0+ → **6 MB**
-  - Older → **8 MB**
+- **Dynamic heap sizing** — reads a persistent config at `/config/nx-ovlloader/heap_size.bin`; if none is set, selects **4 MB** by default.
 - **Live heap change detection** — checks for a heap size change between every overlay load, allowing Ultrahand's System Settings to apply a new heap size without a full reboot
 - **Exit flag signaling** — reads `/config/nx-ovlloader/exit_flag.bin` to allow a clean, user-requested exit rather than an automatic reload; the flag is deleted immediately after being consumed
 - **Auto-relaunch via nx-ovlreloader** — on process exit, uses `pmshell` to launch [nx-ovlreloader](https://github.com/ppkantorski/nx-ovlreloader) (`0x420000000007E51B`), which respawns nx-ovlloader without a full console restart
