@@ -72,7 +72,7 @@ static ConfigEntry entries[] = {
 };
 
 void __libnx_initheap(void) {
-    static char g_innerheap[0x4000];
+    static char g_innerheap[0x8000];
 
     extern char* fake_heap_start;
     extern char* fake_heap_end;
