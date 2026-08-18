@@ -18,7 +18,7 @@ INCLUDES	:=	include
 APP_VERSION	:=	2.0.3
 
 # Path to nx-ovlreloader
-RELOADER_DIR := external/nx-ovlreloader
+RELOADER_DIR := ../nx-ovlreloader
 
 #---------------------------------------------------------------------------------
 # options for code generation
